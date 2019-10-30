@@ -2,15 +2,8 @@ package clark.springframework.sfgpetclinic.services;
 
 import clark.springframework.sfgpetclinic.model.Owner;
 
-import java.util.Set;
-
-public interface OwnerService {
+public interface OwnerService extends CrudService<Owner, Long>{ // owner and long map/correlate to the types - generic type and ID of the parent interface
 
     Owner findByLastName(String lastName);
 
-    Owner findById(Long id);
-
-    Owner save(Owner owner);
-
-    Set<Owner> findAll();
 }
