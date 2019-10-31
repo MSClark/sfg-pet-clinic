@@ -4,6 +4,7 @@ import clark.springframework.sfgpetclinic.model.Owner;
 import clark.springframework.sfgpetclinic.services.OwnerService;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
 import java.util.Set;
 
 @Service
@@ -35,6 +36,6 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public Owner findByLastName(String lastName) {
-        return null;
+        return (Owner) super.map.entrySet().stream().filter(entry -> lastName.equals(entry.getValue())).map(Map.Entry::getKey);
     }
 }
