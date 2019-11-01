@@ -39,8 +39,6 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
                         i.e. if there's any specialties with a null id save it and make sure the specialty in the list has that new ID value
                      */
                     specialty.setId(savedSpecialty.getId());
-                } else {
-
                 }
             });
         }
