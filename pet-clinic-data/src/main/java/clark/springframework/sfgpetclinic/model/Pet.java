@@ -23,7 +23,7 @@ public class Pet extends BaseEntity{
     @Column(name = "name")
     private String name;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet") //mapped by the pet of the visit class
     private Set<Visit> visits = new HashSet<>();
 
     public String getName() {
